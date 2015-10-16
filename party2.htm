@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>The Party</title>
+
+<script language="javascript" type="text/javascript">
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<style type="text/css">
+   /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }
+</style>
+
+<!-- js file  linked to html file--> 
+
+</head>
+
+<body>
+<p>The party is pretty cool. You eat your fill of cake, and your friend Bob gives you a neatly wrapped present. Presents aren't supposed to be until later on, but he seems pretty insistent that you open it now. Do you <a href="#" id="open-show" class="showLink" 
+onclick="showHide('open');return false;">open the present now</a>, or <a href="#" id="wait-show" class="showLink" 
+onclick="showHide('wait');return false;">wait until later?</a>
+</p>
+<div id="open" class="more">
+	<p>You figure that if he's this worked up about it, you should do as he says.</p>
+   <p><a href="box2.htm">Open the box.</a></p>
+</div>
+<div id="wait" class="more">
+	<p>You tell Bob that his present can wait with all the others, and go over to play a game with your friend Sue."</p>
+	<p>Do you suggest <a href="#" id="twister-show" class="showLink" 
+onclick="showHide('twister');return false;">Twister</a>, <a href="#" id="monopoly-show" class="showLink" 
+onclick="showHide('monopoly');return false;">Monopoly</a>, or <a href="#" id="poker-show" class="showLink" 
+onclick="showHide('poker');return false;">Strip Poker</a>?
+	</p>
+	<div id="twister" class="more">
+		<p>Sue is furious. You should have remembered the Twister incident a few years back. You <a href="box2.htm">slouch over to the presents</a>, good mood forgotten.</p>
+	</div>
+	<div id="monopoly" class="more">
+		<p>Sue is so glad that you remembered how much she loves Monopoly. Many hours later, she has robbed everyone blind with capitalism, and you <a href="box2.htm">move on to presents</a>.</p>
+	</div>
+	<div id="poker" class="more">
+		<p>You're usually really good at poker, but the cards aren't in your favor this time. Sue allows you to retain your underwear, but not your dignity. You <a href="box2.htm">move on to the presents</a>, hoping that maybe one of them has clothes.</p>
+	</div>
+</div>
+</body>
