@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>The Beginning</title>
+
+<script language="javascript" type="text/javascript">
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<style type="text/css">
+   /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }
+</style>
+
+<!-- js file  linked to html file--> 
+
+</head>
+
+<body>
+
+
+<h1>Welcome</h1>
+<p>Hello, birthday person. Lots of important things are happening today. Do you want to
+<a href="#" id="party-show" class="showLink" 
+onclick="showHide('party');return false;">Go to your birthday party?</a> or <a href="#" id="bed-show" class="showLink" 
+onclick="showHide('bed');return false;">Stay in bed?</a>
+</p>
+<div id="party" class="more">
+	<p>Excellent choice. Parties have dessert and presents.</p>
+</div>
+<div id="bed" class="more">
+	<p>You die in your sleep a few hours later. You suck at adventure games.</p>
+</div>
+
+
+</body>
+
+</html>
